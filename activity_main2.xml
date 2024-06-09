@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <EditText
+        android:id="@+id/dateBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Date"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/timeBox"/>
+
+    <EditText
+        android:id="@+id/timeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Time"
+        android:inputType="time"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateBox"
+        app:layout_constraintBottom_toTopOf="@+id/confirmBtn"/>
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/usernameBtn"
+        app:layout_constraintTop_toBottomOf="@+id/timeBox"
+        app:layout_constraintBottom_toTopOf="@+id/cityBtn"/>
+
+    <Button
+        android:id="@+id/usernameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Records"
+        app:layout_constraintStart_toEndOf="@+id/confirmBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeBox"
+        app:layout_constraintBottom_toTopOf="@+id/dateBtn"/>
+
+    <Button
+        android:id="@+id/cityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Records"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dateBtn"
+        app:layout_constraintTop_toBottomOf="@+id/confirmBtn"
+        app:layout_constraintBottom_toTopOf="@+id/result"/>
+
+    <Button
+        android:id="@+id/dateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="on Date records"
+        app:layout_constraintStart_toEndOf="@+id/cityBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameBtn"
+        app:layout_constraintBottom_toTopOf="@+id/result"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

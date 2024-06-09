@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/madBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAD"
+        app:layout_constraintStart_toEndOf="@+id/dsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mlBtn"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"/>
+
+    <EditText
+        android:id="@+id/nameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/noBox"/>
+
+    <EditText
+        android:id="@+id/noBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Phone Number"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameBox"
+        app:layout_constraintBottom_toTopOf="@+id/cityBox"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/cityBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Select City"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noBox"
+        app:layout_constraintBottom_toTopOf="@+id/pythonBtn"/>
+
+    <CheckBox
+        android:id="@+id/javaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java Programming"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pythonBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cityBox"
+        app:layout_constraintBottom_toTopOf="@+id/dsaBtrn"/>
+
+    <CheckBox
+        android:id="@+id/pythonBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Python"
+        app:layout_constraintStart_toEndOf="@+id/javaBtn"
+        app:layout_constraintEnd_toStartOf="@+id/javascriptBtn"
+        app:layout_constraintBottom_toTopOf="@+id/dsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cityBox"/>
+
+    <CheckBox
+        android:id="@+id/javascriptBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JavaScript"
+        app:layout_constraintStart_toEndOf="@+id/pythonBtn"
+        app:layout_constraintEnd_toStartOf="@+id/mlBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cityBox"
+        app:layout_constraintBottom_toTopOf="@+id/dsBtn"/>
+
+    <CheckBox
+        android:id="@+id/mlBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ML"
+        app:layout_constraintStart_toEndOf="@+id/javascriptBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityBox"
+        app:layout_constraintBottom_toTopOf="@+id/madBtn"/>
+
+    <CheckBox
+        android:id="@+id/dsaBtrn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DSA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dsBtn"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/javaBtn"/>
+
+    <CheckBox
+        android:id="@+id/dsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DS"
+        app:layout_constraintStart_toEndOf="@+id/dsaBtrn"
+        app:layout_constraintEnd_toStartOf="@+id/madBtn"
+        app:layout_constraintTop_toBottomOf="@+id/pythonBtn"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"/>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dsBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
